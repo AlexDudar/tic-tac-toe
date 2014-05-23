@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/application.css">
+  <meta charset="utf-8">
+</head>
+
+<body ng-app="TicTacToe" ng-controller="TicTacToeCtrl" ng-init="initBoard();">
+
+  <div class="welcome-block" ng-hide="showBoard">
+    <div class="row">
+      <div class="inner large-6 medium-10 small-12 large-centered medium-centered column">
+        <h1>Welcome to Tic Tac Toe Game!</h1>
+        <h3>Please enter players names:</h3>
+
+        <form novalidate>
+          <p>
+            <label>Player 1:</label>
+            <input type="text" ng-model="player1" required>
+          </p>
+          <p>
+            <label>Player 2:</label>
+            <input type="text" ng-model="player2" required>
+          </p>
+          <button class="button" ng-show="player1 && player2" ng-click="showBoard=!showBoard; addUsers()">Lets go!</button>
+        </form><!-- /form -->
+
+      </div>
+    </div>
+  </div><!-- /.welcome-block -->
+
+  <div ng-show="showBoard">
+
+    <header class="header">
+      <div class="row">
+        <div class="small-12 column">
+          <h1>Tic Tac Toe Game</h1>
+        </div>
+      </div>
+    </header><!-- /.header -->
+
+    <div class="row">
+
+      <div class="large-8 medium-12 small-12 columns">
+
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="board">
+              <ul class="small-block-grid-3 large-10 medium-10 small-12 small-centered column">
+                <li class="box" ng-click="setSymbol($index)" ng-repeat="box in boxes track by $index">{{box}}</li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.board section -->
+
+        <div class="row">
+          <div class="small-12 small-centered columns text-center">
+            <p ng-bind="message"></p>
+            <button class="button" ng-click="initBoard()">Start new game</button>
+            <button class="button" ng-click="showBoard=!showBoard">Change players</button>
+          </div>
+        </div><!-- /.message -->
+
+      </div><!-- /content -->
+
+      <div class="large-4 medium-12 small-12 columns">
+        <h2>Scoreboard:</h2>
+        <ul class="user-list">
+          <li ng-repeat="user in users |  orderBy:'-score'">
+            {{user.name}}: {{user.score}}
+          </li>
+        </ul>
+      </div><!-- /.user-list section -->
+
+    </div><!-- /.row wrapper -->
+
+  </div><!-- /div wrapper -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="js/application.js"></script>
+
+</body>
+</html>

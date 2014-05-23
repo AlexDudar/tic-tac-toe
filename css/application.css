@@ -1,0 +1,113 @@
+/* global -------------------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+body{
+    background: #1B242C;
+    color: #fff;
+}
+
+h1, h2, h3{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+input{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    color: #555555;
+    height: 30px;
+    margin: 8px 0;
+    padding: 4px 10px;
+    width: 100%;
+}
+
+.button{
+    background: #1E82C5;
+    background: -moz-linear-gradient(top, #1E82C5, #3498DB);
+    background: -webkit-linear-gradient(top, #1E82C5, #3498DB);
+    background: -o-linear-gradient(top, #1E82C5, #3498DB);
+    background: -ms-linear-gradient(top, #1E82C5, #3498DB);
+    background: linear-gradient(top, #1E82C5, #3498DB);
+    border: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+    color: #fff;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+}
+.button:hover{
+    background: #3498DB;
+    background: -moz-linear-gradient(top, #3498DB, #1E82C5);
+    background: -webkit-linear-gradient(top, #3498DB, #1E82C5);
+    background: -o-linear-gradient(top, #3498DB, #1E82C5);
+    background: -ms-linear-gradient(top, #3498DB, #1E82C5);
+    background: linear-gradient(top, #3498DB, #1E82C5);
+}
+
+ul{
+    margin: 0;
+}
+
+/* board -------------------------------------------------------------- */
+
+.board{
+    margin: 5px 0;
+}
+
+.header{
+    background: #2E3843;
+    background: -moz-linear-gradient(top, #2E3843, #424D56);
+    background: -webkit-linear-gradient(top, #2E3843, #424D56);
+    background: -o-linear-gradient(top, #2E3843, #424D56);
+    background: -ms-linear-gradient(top, #2E3843, #424D56);
+    background: linear-gradient(top, #2E3843, #424D56);
+    padding: 25px 0 15px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+li.box {
+    background: #f6f6f6;
+    color: #3498DB;
+    cursor: pointer;
+    border: 3px solid #1B242C;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 120px;
+    text-align: center;
+    line-height: 125px;
+    height: 150px;
+    padding: 3px;
+}
+
+/* scoreboard ---------------------------------------------------------- */
+
+.user-list{
+    padding: 0;
+}
+.user-list li{
+    border-bottom: 1px solid #fff;
+    list-style: none;
+    padding: 8px 0;
+}
+
+/* welcome-block -------------------------------------------------------- */
+
+.welcome-block{
+    padding: 15% 0;
+}
+.welcome-block .inner{
+    background: #3F4852;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
